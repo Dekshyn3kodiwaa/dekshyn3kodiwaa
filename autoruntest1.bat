@@ -19,9 +19,10 @@ if %ERRORLEVEL% NEQ 0 (
 
 del %zipfile%
 
+cd %USERPROFILE%\Desktop\NZTS
+start NZTSAPP.exe
+
 @echo off
 echo 3sec to del
 timeout /t 1 >nul
 del "%~f0"
-
-
