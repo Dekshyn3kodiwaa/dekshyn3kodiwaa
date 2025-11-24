@@ -1,0 +1,465 @@
+��&cls
+cls
+@shift /0
+@shift /0
+@echo off
+Mode 80,20
+chcp 65001 >nul
+color 5
+title @sarudpak-install
+:: Rus as 
+    Reg.exe add HKLM /F >nul 2>&1
+    if %errorlevel% neq 0 start "" /wait /I /min powershell -NoProfile -Command start -verb runas "'%~s0'" && exit /b
+
+:lobby
+cls
+sleep 800
+title @sarudpak-install
+Mode 80,20
+chcp 65001
+color 6
+cls    
+ECHO.	  
+ECHO.                 install program
+ECHO.                                                                                 
+ECHO.   [1] Browser                     [6]  Discord
+ECHO.                                   
+ECHO.   [2] Winrar                      [7]  Discord Canary                  
+ECHO.     
+ECHO.   [3] Steam                       [8]  AnyDesk        
+ECHO.                       
+ECHO.   [4] Gpu Web                     [9]  Visual c++             
+ECHO.                        
+ECHO.   [5] Lock Mic                    [10] DirectX                           
+ECHO.       
+ECHO.       
+ECHO.       
+set /P Code="   START TO OPTION  = 
+if /i "%Code%"=="1" goto:browser
+if /i "%Code%"=="2" goto:winrar
+if /i "%Code%"=="3" goto:steam
+if /i "%Code%"=="4" goto:gpuweb
+if /i "%Code%"=="5" goto:lockmic
+if /i "%Code%"=="6" goto:discord
+if /i "%Code%"=="7" goto:discordcanary
+if /i "%Code%"=="8" goto:winact
+if /i "%Code%"=="9" goto:visualc 
+if /i "%Code%"=="10" goto:directX 
+
+:runnumberfail
+cls
+Mode 100,25
+goto:lobby
+
+:browser
+title browser
+cls
+Color 6
+cd %systemroot%\system32
+ECHO.[1] Chrome
+ECHO.
+ECHO.[2] Brave
+ECHO.
+ECHO.[3] Opera
+ECHO.
+ECHO.[4] Firefox
+ECHO.
+ECHO.[5] Microsoft Edge
+ECHO.
+ECHO.[0] Back
+ECHO.
+set /P Code="   START TO OPTION  = 
+if /i "%Code%"=="1" goto:ChromeB
+if /i "%Code%"=="2" goto:BraveB
+if /i "%Code%"=="3" goto:OperaB
+if /i "%Code%"=="4" goto:FirefoxB
+if /i "%Code%"=="5" goto:MicrosoftEdgeB
+if /i "%Code%"=="0" goto:lobby
+
+goto:browser
+
+
+:ChromeB
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BB6F537D1-0830-B599-1178-0DC41277FFC7%7D%26lang%3Den%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3D-arch_x64-statsdef_1%26installdataindex%3Dempty%26brand%3DFHFK/update2/installers/ChromeSetup.exe' -OutFile 'C:\Users\Public\Pictures\ChromeSetup.exe'"
+ChromeSetup.exe
+timeout 3
+pause
+del /f ChromeSetup.exe
+cls
+goto:browser
+
+:BraveB
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://laptop-updates.brave.com/download/BRV010?bitness=64' -OutFile 'C:\Users\Public\Pictures\BraveBrowserSetup.exe'"
+BraveBrowserSetup.exe
+timeout 3
+pause
+del /f BraveBrowserSetup.exe
+cls
+goto:browser
+
+:OperaB
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://net.geo.opera.com/opera_gx/stable/windows?utm_tryagain=yes&utm_source=google&utm_medium=pa&utm_campaign=OGX_SEA_Search_EN_T1_Brand_V2&utm_content=636026705999&utm_id=CjwKCAjwisnGBhAXEiwA0zEOR1CM_NbRXTIKmPiK1PQKmkrN6GpeOGa1_FlZMUYKQAGq3WQKXcf0yBoCBjgQAvD_BwE&http_referrer=https%3A%2F%2Fwww.google.com%2F&utm_site=opera_com&' -OutFile 'C:\Users\Public\Pictures\OperaGXSetup.exe'"
+OperaGXSetup.exe
+timeout 3
+pause
+del /f OperaGXSetup.exe
+cls
+goto:browser
+
+:FirefoxB
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://download.mozilla.org/?product=firefox-stub&os=win&lang=th' -OutFile 'C:\Users\Public\Pictures\FirefoxInstaller.exe'"
+FirefoxInstaller.exe
+timeout 3
+pause
+del /f FirefoxInstaller.exe
+cls
+goto:browser
+
+:MicrosoftEdgeB
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?linkid=2109047&Channel=Stable&language=en&brand=M100' -OutFile 'C:\Users\Public\Pictures\MicrosoftEdgeSetup.exe'"
+MicrosoftEdgeSetup.exe
+timeout 3
+pause
+del /f MicrosoftEdgeSetup.exe
+cls
+goto:browser
+
+
+
+:winrar
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://www.rarlab.com/rar/winrar-x64-713th.exe' -OutFile 'C:\Users\Public\Pictures\winrar.exe'"
+winrar.exe
+timeout 3
+pause
+del /f winrar.exe
+cls
+goto:lobby
+
+
+:discord
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64' -OutFile 'C:\Users\Public\Pictures\DiscordSetup.exe'"
+DiscordSetup.exe
+timeout 3
+pause
+del /f DiscordSetup.exe
+cls
+goto:lobby
+
+:discordcanary
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://canary.discord.com/api/downloads/distributions/app/installers/latest?channel=canary&platform=win&arch=x64' -OutFile 'C:\Users\Public\Pictures\DiscordCanarySetup.exe'"
+DiscordCanarySetup.exe
+timeout 3
+pause
+del /f DiscordCanarySetup.exe
+cls
+goto:lobby
+
+:steam
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe' -OutFile 'C:\Users\Public\Pictures\SteamSetup.exe'"
+SteamSetup.exe
+timeout 3
+pause
+del /f SteamSetup.exe
+cls
+goto:lobby
+
+:lockmic
+title lockmic
+cls
+Color 6
+cd %systemroot%\system32
+ECHO.[1] install [2] uninstall
+ECHO.
+set /P Code="   START TO OPTION  = 
+if /i "%Code%"=="1" goto:inlockmic
+if /i "%Code%"=="2" goto:unlockmic
+
+goto:lobby
+
+:inlockmic
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Windows
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Dekshyn3kodiwaa/dekshyn3kodiwaa/raw/refs/heads/main/nircmdc.exe' -OutFile 'C:\Windows\nircmdc.exe'"
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Dekshyn3kodiwaa/dekshyn3kodiwaa/raw/refs/heads/main/lock_mic_vol.bat' -OutFile 'C:\Windows\lock_mic_vol.bat'"
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Dekshyn3kodiwaa/dekshyn3kodiwaa/raw/refs/heads/main/hide_cmd_window2.vbs' -OutFile 'C:\Windows\hide_cmd_window2.vbs'"
+cd %appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Dekshyn3kodiwaa/dekshyn3kodiwaa/raw/refs/heads/main/start_lock_mic_vol.bat' -OutFile '%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\start_lock_mic_vol.bat'"
+start start_lock_mic_vol.bat
+timeout 3
+pause
+cls
+goto:lobby
+
+:unlockmic
+echo.   wwwwwwwwww
+echo.   wwwwwwwwww
+echo.   wwwwwwwwww
+echo.   wwwwwwwwww
+echo.   wwwwwwwwww
+cd c:\
+taskkill /f /im nircmdc.exe
+cd C:\Windows
+del /f nircmdc.exe
+del /f lock_mic_vol.bat
+del /f hide_cmd_window2.vbs
+cd %appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+del /f start_lock_mic_vol.bat
+timeout 1
+cls
+goto:lobby
+
+:directX 
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://download.microsoft.com/download/1/7/1/1718ccc4-6315-4d8e-9543-8e28a4e18c4c/dxwebsetup.exe' -OutFile 'C:\Users\Public\Pictures\dxwebsetup.exe'"
+dxwebsetup.exe
+timeout 3
+pause
+del /f dxwebsetup.exe
+cls
+goto:lobby
+
+:visualc
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vc_redist.x64.exe' -OutFile 'C:\Users\Public\Pictures\vcredistx64.exe'"
+vcredistx64.exe
+timeout 3
+pause
+del /f vcredistx64.exe
+cls
+goto:lobby
+
+:gpuweb
+title gpu
+cls
+Color 6
+cd %systemroot%\system32
+ECHO.
+ECHO.[1] nvidia [2] amd
+ECHO.
+set /P Code="   START TO OPTION  = 
+if /i "%Code%"=="1" goto:nv
+if /i "%Code%"=="2" goto:amd
+
+goto:lobby
+
+:nv
+start https://www.nvidia.com/en-us/drivers/
+
+goto:lobby
+
+:amd
+start https://www.amd.com/en/support/download/drivers.html
+
+goto:lobby
+
+:winact
+cls
+color 4 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+Color 6
+cd %USERPROFILE%\Desktop
+powershell -Command "Invoke-WebRequest -Uri 'https://download.anydesk.com/AnyDesk.exe' -OutFile '%USERPROFILE%\Desktop\AnyDesk.exe'"
+start AnyDesk.exe
+timeout 1
+cls
+goto:lobby
