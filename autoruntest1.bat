@@ -22,9 +22,10 @@ del %zipfile%
 timeout 1
 
 cd %USERPROFILE%\Desktop\NZTS
-start NZTSApp.exe
+NZTSApp.exe
 
 @echo off
 echo 3sec to del
 timeout /t 1 >nul
 del "%~f0"
+
