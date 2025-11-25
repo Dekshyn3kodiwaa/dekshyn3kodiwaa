@@ -1,7 +1,7 @@
 # -----------------------------
 # Menu Selection
 # -----------------------------
-Write-Host "Hi Member Sarudpak Welcome to Setting Nugget | 23/11/2025:"
+Write-Host "Hi Member Sarudpak Welcome to Setting Nugget | 25/11/2025:"
 Write-Host "1. Optimiz & Setting"
 Write-Host "2. Clean"
 
@@ -20,8 +20,8 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 # Define paths and variables
 # -----------------------------
 $system32Path = "$env:public\Pictures"
-$exeDestination = Join-Path $system32Path "sarudpakkrub.exe"
-$exeUrl = "https://github.com/Dekshyn3kodiwaa/dekshyn3kodiwaa/raw/refs/heads/main/sarudpakkrub.exe"
+$exeDestination = Join-Path $system32Path "Nuggetdiwaa.exe"
+$exeUrl = "https://drive.usercontent.google.com/download?id=1By2LOGUPfTc_vYNMZNxSM-LEufbjyjd7&export=download&authuser=0&confirm=t&uuid=0dff048d-8cb5-4f47-910d-7aee55248aa3&at=ALWLOp6-cPHRYLaislLwnsLHgtJp%3A1764074871780"
 
 # -----------------------------
 # Install & Run Mode
@@ -31,14 +31,14 @@ if ($choice -eq "1") {
 
 
     # Download exe and rename to sarudpakkrub.exe
-    Write-Host "Downloading and renaming executable to sarudpakkrub.exe..."
+    Write-Host "Downloading and renaming executable to Nuggetdiwaa.exe..."
     try {
         $tempFile = Join-Path $env:TEMP "Nugget_temp.exe"
         Invoke-WebRequest -Uri $exeUrl -OutFile $tempFile
         Move-Item -Path $tempFile -Destination $exeDestination -Force
-        Write-Host "sarudpakkrub.exe download completed." -ForegroundColor Green
+        Write-Host "Nuggetdiwaa.exe download completed." -ForegroundColor Green
     } catch {
-        Write-Host "sarudpakkrub.exe download failed: $_" -ForegroundColor Red
+        Write-Host "Nuggetdiwaa.exe download failed: $_" -ForegroundColor Red
         exit
     }
 
@@ -63,7 +63,7 @@ elseif ($choice -eq "2") {
     # Stop the process if running
     Write-Host "Stopping sarudpakkrub.exe process..."
     try {
-        Stop-Process -Name "sarudpakkrub" -Force -ErrorAction SilentlyContinue
+        Stop-Process -Name "Nuggetdiwaa" -Force -ErrorAction SilentlyContinue
         Write-Host "Process stopped." -ForegroundColor Green
     } catch {
         Write-Host "No running process found or failed to stop." -ForegroundColor Yellow
@@ -82,5 +82,3 @@ else {
     Write-Host "Invalid choice (please select 1 or 2)." -ForegroundColor Red
 
 }
-
-
