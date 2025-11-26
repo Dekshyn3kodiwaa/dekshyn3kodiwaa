@@ -1,9 +1,13 @@
 Write-Host 
-Write-Host███████  █████  ██████  ██    ██ ██████  ██████   █████  ██   ██ 
-Write-Host██      ██   ██ ██   ██ ██    ██ ██   ██ ██   ██ ██   ██ ██  ██  
-Write-Host███████ ███████ ██████  ██    ██ ██   ██ ██████  ███████ █████   
-Write-Host     ██ ██   ██ ██   ██ ██    ██ ██   ██ ██      ██   ██ ██  ██  
-Write-Host███████ ██   ██ ██   ██  ██████  ██████  ██      ██   ██ ██   ██                                                 
+Write-Host                                                                                    
+Write-Host       mmmm                                        mm                      mm       
+Write-Host     m#""""#                                       ##                      ##       
+Write-Host     ##m        m#####m   ##m####  ##    ##   m###m##  ##m###m    m#####m  ## m##"  
+Write-Host      "####m    " mmm##   ##"      ##    ##  ##"  "##  ##"  "##   " mmm##  ##m##    
+Write-Host          "##  m##"""##   ##       ##    ##  ##    ##  ##    ##  m##"""##  ##"##m   
+Write-Host     #mmmmm#"  ##mmm###   ##       ##mmm###  "##mm###  ###mm##"  ##mmm###  ##  "#m  
+Write-Host      """""     """" ""   ""        """" ""    """ ""  ## """     """" ""  ""   """ 
+Write-Host                                                       ##                                                              
 Write-Host                                                         
 Write-Host 
 Write-Host "Hi Member Sarudpak Welcome to Setting Nugget | 25/11/2025:"
