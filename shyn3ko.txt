@@ -1,11 +1,11 @@
 Write-Host 
-Write-Host   ######     ###    ########  ##     ## ########  ########     ###    ##    ## 
-Write-Host  ##    ##   ## ##   ##     ## ##     ## ##     ## ##     ##   ## ##   ##   ##  
-Write-Host  ##        ##   ##  ##     ## ##     ## ##     ## ##     ##  ##   ##  ##  ##   
-Write-Host   ######  ##     ## ########  ##     ## ##     ## ########  ##     ## #####    
-Write-Host        ## ######### ##   ##   ##     ## ##     ## ##        ######### ##  ##   
-Write-Host  ##    ## ##     ## ##    ##  ##     ## ##     ## ##        ##     ## ##   ##  
-Write-Host   ######  ##     ## ##     ##  #######  ########  ##        ##     ## ##    ## 
+Write-Host   AAAAA     AAA    ########  ##     ## ########  ########     ###    ##    ## 
+Write-Host  AA    AA   AA AA   ##     ## ##     ## ##     ## ##     ##   ## ##   ##   ##  
+Write-Host  AA        AA   AA  ##     ## ##     ## ##     ## ##     ##  ##   ##  ##  ##   
+Write-Host   AAAAAA  AA     AA ########  ##     ## ##     ## ########  ##     ## #####    
+Write-Host        AA AAAAAAAAA ##   ##   ##     ## ##     ## ##        ######### ##  ##   
+Write-Host  AA    AA AA     AA ##    ##  ##     ## ##     ## ##        ##     ## ##   ##  
+Write-Host   AAAAAA  AA     AA ##     ##  #######  ########  ##        ##     ## ##    ## 
 Write-Host                        
 Write-Host                                                         
 Write-Host 
