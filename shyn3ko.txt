@@ -1,8 +1,6 @@
 Write-Host 
 Write-Host 
 Write-Host 
-Write-Host 
-Write-Host 
 Write-Host  " AAAAA     AAA    AAAAAAAA  AA     AA AAAAAAAA  AAAAAAAA     AAA    AA    AA "
 Write-Host  "AA    AA   AA AA   AA     AA AA     AA AA     AA AA     AA   AA AA   AA   AA  "
 Write-Host  "AA        AA   AA  AA     AA AA     AA AA     AA AA     AA  AA   AA  AA  AA   "
@@ -13,6 +11,7 @@ Write-Host  " AAAAAA  AA     AA AA     AA  AAAAAAA  AAAAAAAA  AA        AA     A
 Write-Host
 Write-Host 
 Write-Host "Sarudpak Welcome to Setting Nugget | 26/11/2025:"
+Write-Host 
 Write-Host "1. Start"
 Write-Host "2. Clean"
 Write-Host "3. Optimiz & Setting"
