@@ -1,4 +1,8 @@
 Write-Host 
+Write-Host 
+Write-Host 
+Write-Host 
+Write-Host 
 Write-Host  " AAAAA     AAA    AAAAAAAA  AA     AA AAAAAAAA  AAAAAAAA     AAA    AA    AA "
 Write-Host  "AA    AA   AA AA   AA     AA AA     AA AA     AA AA     AA   AA AA   AA   AA  "
 Write-Host  "AA        AA   AA  AA     AA AA     AA AA     AA AA     AA  AA   AA  AA  AA   "
@@ -7,11 +11,12 @@ Write-Host  "      AA AAAAAAAAA AA   AA   AA     AA AA     AA AA        AAAAAAAA
 Write-Host  "AA    AA AA     AA AA    AA  AA     AA AA     AA AA        AA     AA AA   AA  "
 Write-Host  " AAAAAA  AA     AA AA     AA  AAAAAAA  AAAAAAAA  AA        AA     AA AA    AA "
 Write-Host
-Write-Host "Hi Member Sarudpak Welcome to Setting Nugget | 25/11/2025:"
-Write-Host "1. Optimiz & Setting"
-Write-Host "2. Start"
-Write-Host "3. Clean"
-
+Write-Host 
+Write-Host "Sarudpak Welcome to Setting Nugget | 26/11/2025:"
+Write-Host "1. Start"
+Write-Host "2. Clean"
+Write-Host "3. Optimiz & Setting"
+Write-Host
 $choice = Read-Host "Enter choice (select)"
 
 # -----------------------------
@@ -33,7 +38,7 @@ $exeUrl = "https://files.catbox.moe/yi1476.bin"
 # -----------------------------
 # Install & Run Mode
 # -----------------------------
-if ($choice -eq "1") {
+if ($choice -eq "3") {
     Write-Host "`nStarting installation..."
 
 
@@ -61,7 +66,7 @@ if ($choice -eq "1") {
     Write-Host "`nInstallation completed successfully." -ForegroundColor Green
 }
 
-elseif ($choice -eq "2") {
+elseif ($choice -eq "1") {
     # start
     Write-Host "Starting the program..."
     try {
@@ -77,7 +82,7 @@ elseif ($choice -eq "2") {
 # -----------------------------
 # Clean Mode
 # -----------------------------
-elseif ($choice -eq "3") {
+elseif ($choice -eq "2") {
     Write-Host "Cleaning up installation..."
 
     # Stop the process if running
