@@ -1,0 +1,187 @@
+��&cls
+cls
+@shift /0
+@shift /0
+@echo off
+Mode 80,16
+chcp 65001 >nul
+color 1 
+title atlas-os
+:: Rus as 
+    Reg.exe add HKLM /F >nul 2>&1
+    if %errorlevel% neq 0 start "" /wait /I /min powershell -NoProfile -Command start -verb runas "'%~s0'" && exit /b
+
+echo. 
+echo.
+echo.    █████╗ ████████╗██╗      █████╗ ███████╗     ██████╗ ███████╗
+echo.   ██╔══██╗╚══██╔══╝██║     ██╔══██╗██╔════╝    ██╔═══██╗██╔════╝
+echo.   ███████║   ██║   ██║     ███████║███████╗    ██║   ██║███████╗
+echo.   ██╔══██║   ██║   ██║     ██╔══██║╚════██║    ██║   ██║╚════██║
+echo.   ██║  ██║   ██║   ███████╗██║  ██║███████║    ╚██████╔╝███████║
+echo.   ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝     ╚═════╝ ╚══════╝
+echo.                                                  
+echo.
+timeout 3
+pause
+:main
+cls
+
+echo [1/5] Reg Disable Update
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Update" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Update" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\Update\ExcludeWUDriversInQualityUpdate" /v "value" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching" /v "DontSearchWindowsUpdate" /t REG_DWORD /d "1" /f
+timeout 1
+cls
+mkdir %USERPROFILE%\Desktop\Altas-Os   
+
+:mainvvv
+cls    
+echo [2/5] Version Altas
+ECHO.                                                                                 
+ECHO.   [1] v0.5.0     [2] v0.4.1     [3] v0.4.0
+ECHO.                                   
+set /P Code="   START TO OPTION  = 
+if /i "%Code%"=="1" goto:fffff1
+if /i "%Code%"=="2" goto:fffff2
+if /i "%Code%"=="3" goto:fffff3
+
+:runnumberfail
+cls
+goto:mainvvv
+
+
+:fffff1
+cls
+echo [3/5] v0.5.0
+color 1 
+    echo.    
+    echo.    ██████╗ ██╗   ██╗███╗   ██╗
+    echo.    ██╔══██╗██║   ██║████╗  ██║
+    echo.    ██████╔╝██║   ██║██╔██╗ ██║
+    echo.    ██╔══██╗██║   ██║██║╚██╗██║
+    echo.    ██║  ██║╚██████╔╝██║ ╚████║
+    echo.    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+timeout 1
+cd %USERPROFILE%\Desktop\Altas-Os
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Atlas-OS/Atlas/releases/download/0.5.0-hotfix/AtlasPlaybook_v0.5.0-hotfix.apbx' -OutFile '%USERPROFILE%\Desktop\Altas-Os\Atlasv0.5.0.apbx'"
+cls
+pause
+:KKKK555
+cls
+goto:JAX111
+
+:fffff2
+cls
+echo [3/5] v0.4.1
+color 1 
+    echo.    
+    echo.    ██████╗ ██╗   ██╗███╗   ██╗
+    echo.    ██╔══██╗██║   ██║████╗  ██║
+    echo.    ██████╔╝██║   ██║██╔██╗ ██║
+    echo.    ██╔══██╗██║   ██║██║╚██╗██║
+    echo.    ██║  ██║╚██████╔╝██║ ╚████║
+    echo.    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+timeout 1
+cd %USERPROFILE%\Desktop\Altas-Os
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Atlas-OS/Atlas/releases/download/0.4.1/AtlasPlaybook_v0.4.1.apbx' -OutFile '%USERPROFILE%\Desktop\Altas-Os\Atlasv0.4.1.apbx'"
+cls
+pause
+:KKKK555
+cls
+goto:JAX111
+
+:fffff3
+cls
+echo [3/5] v0.4.0
+color 1 
+    echo.    
+    echo.    ██████╗ ██╗   ██╗███╗   ██╗
+    echo.    ██╔══██╗██║   ██║████╗  ██║
+    echo.    ██████╔╝██║   ██║██╔██╗ ██║
+    echo.    ██╔══██╗██║   ██║██║╚██╗██║
+    echo.    ██║  ██║╚██████╔╝██║ ╚████║
+    echo.    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+timeout 1
+cd %USERPROFILE%\Desktop\Altas-Os
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Atlas-OS/Atlas/releases/download/0.4.0/AtlasPlaybook_v0.4.0.apbx' -OutFile '%USERPROFILE%\Desktop\Altas-Os\Atlasv0.4.0.apbx'"
+cls
+pause
+:KKKK555
+cls
+goto:JAX111
+
+:JAX111
+echo [4/5] install atlas os
+color 1 
+    echo.    
+    echo.    
+    echo.
+    echo.
+    echo.
+    echo.
+    echo.   ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+    echo.   ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+    echo.   ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+    echo.   ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+    echo.   ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+    echo.   ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝                             
+cd C:\Users\Public\Pictures
+powershell -Command "Invoke-WebRequest -Uri 'https://files.catbox.moe/pbtxfv.zip' -OutFile 'C:\Users\Public\Pictures\AMEBeta.zip'"
+
+timeout 2
+
+set zipfile="C:\Users\Public\Pictures\AMEBeta.zip"
+set outdir="%USERPROFILE%\Desktop\Altas-Os"
+
+
+if not exist %outdir% (
+    mkdir %outdir%
+)
+
+tar -xf %zipfile% -C %outdir%
+
+if %ERRORLEVEL% NEQ 0 (
+    echo ❌ 
+    pause
+    exit /b
+)
+
+
+del %zipfile%
+
+timeout 1
+:FInaleiei
+cls
+goto:JAX222
+
+:JAX222
+echo [5/5] Confirm atlas os
+    echo.    
+    echo.     ██████╗ ██████╗ ███╗   ██╗███████╗██╗██████╗ ███╗   ███╗
+    echo.    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔══██╗████╗ ████║
+    echo.    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██████╔╝██╔████╔██║
+    echo.    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██╔══██╗██║╚██╔╝██║
+    echo.    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║██║  ██║██║ ╚═╝ ██║
+    echo.     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  
+    echo. 
+timeout 1
+cd %USERPROFILE%\Desktop\Altas-Os
+start AMEBeta.exe
+cls
+echo [5/5] End atlas os
+color 1 
+    echo.    
+    echo.    ███████╗███╗   ██╗██████╗ 
+    echo.    ██╔════╝████╗  ██║██╔══██╗
+    echo.    █████╗  ██╔██╗ ██║██║  ██║
+    echo.    ██╔══╝  ██║╚██╗██║██║  ██║
+    echo.    ███████╗██║ ╚████║██████╔╝
+    echo.    ╚══════╝╚═╝  ╚═══╝╚═════╝ 
+    echo.    
+timeout 3
+explorer "%USERPROFILE%\Desktop\Altas-Os"
+cls
+
+exit
