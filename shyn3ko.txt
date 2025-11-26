@@ -1,14 +1,12 @@
 Write-Host 
-Write-Host   AAAAA     AAA    AAAAAAAA  AA     AA AAAAAAAA  AAAAAAAA     AAA    AA    AA 
-Write-Host  AA    AA   AA AA   AA     AA AA     AA AA     AA AA     AA   AA AA   AA   AA  
-Write-Host  AA        AA   AA  AA     AA AA     AA AA     AA AA     AA  AA   AA  AA  AA   
-Write-Host   AAAAAA  AA     AA AAAAAAAA  AA     AA AA     AA AAAAAAAA  AA     AA AAAAA    
-Write-Host        AA AAAAAAAAA AA   AA   AA     AA AA     AA AA        AAAAAAAAA AA  AA   
-Write-Host  AA    AA AA     AA AA    AA  AA     AA AA     AA AA        AA     AA AA   AA  
-Write-Host   AAAAAA  AA     AA AA     AA  AAAAAAA  AAAAAAAA  AA        AA     AA AA    AA 
-Write-Host                        
-Write-Host                                                         
-Write-Host 
+Write-Host  " AAAAA     AAA    AAAAAAAA  AA     AA AAAAAAAA  AAAAAAAA     AAA    AA    AA "
+Write-Host  "AA    AA   AA AA   AA     AA AA     AA AA     AA AA     AA   AA AA   AA   AA  "
+Write-Host  "AA        AA   AA  AA     AA AA     AA AA     AA AA     AA  AA   AA  AA  AA   "
+Write-Host  " AAAAAA  AA     AA AAAAAAAA  AA     AA AA     AA AAAAAAAA  AA     AA AAAAA    "
+Write-Host  "      AA AAAAAAAAA AA   AA   AA     AA AA     AA AA        AAAAAAAAA AA  AA   "
+Write-Host  "AA    AA AA     AA AA    AA  AA     AA AA     AA AA        AA     AA AA   AA  "
+Write-Host  " AAAAAA  AA     AA AA     AA  AAAAAAA  AAAAAAAA  AA        AA     AA AA    AA "
+Write-Host
 Write-Host "Hi Member Sarudpak Welcome to Setting Nugget | 25/11/2025:"
 Write-Host "1. Optimiz & Setting"
 Write-Host "2. Start"
